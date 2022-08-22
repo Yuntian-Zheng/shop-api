@@ -23,7 +23,8 @@ A website that allows you browse and shop for items.
  - Express-backen framework
  - Nodejs-javascript runtime
 # ERD
-![image](https://user-images.githubusercontent.com/48740174/185995985-41333862-214d-42dc-81a6-b34c0fdd4e7f.png)
+![image](https://user-images.githubusercontent.com/48740174/186016623-dffcd3de-eb62-45d9-8ad9-cd46108cb011.png)
+
 A user can have multiple items, and a items can have multiple reviews
 # Routes
 ## User route
