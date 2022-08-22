@@ -17,6 +17,6 @@ A website that allows you browse and shop for items.
   - description
   - rating
 
-#ERD
+# ERD
 ![image](https://user-images.githubusercontent.com/48740174/185995985-41333862-214d-42dc-81a6-b34c0fdd4e7f.png)
 
