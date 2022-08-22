@@ -12,10 +12,12 @@ A website that allows you browse and shop for items.
   - description
   - price
   - quantity
+  - owner
 
 - reviews
   - description
   - rating
+  - owner
 # Techology
  - MongoDB-database
  - Express-backen framework
