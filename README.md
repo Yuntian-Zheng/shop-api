@@ -1,129 +1,70 @@
-# Welcome to ShopPoint! ✨
+# Ecommerce website
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://shoppingpoint.herokuapp.com/)&nbsp;[![Build passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat-square)](https://shoppingpoint.herokuapp.com/)&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://foodeazy.herokuapp.com/)&nbsp;[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://shoppingpoint.herokuapp.com/)&nbsp;![Made with love in Nepal](https://madewithlove.now.sh/np?heart=true)
+A website that allows you browse and shop for items.
 
-**Project Link** - ***https://shoppoint.herokuapp.com/***
+# Models
 
-![screenshot](image/home.PNG)
+- User
 
-## Features and Functionalities 😃
+  - username
+  - password
+  - cart
 
-**User features**
+- items
 
-- Full featured shopping cart
-- Product reviews and ratings
-- Filtering (short by, category, & price range)
-- Account Verification (2 factor authentication using email)
-- Password Reset (Forget Password)
-- Token based authentication
-- Product search feature
-- User profile with orders
-- Save Cart
-- Delete Cart
-- Choose quantity (No of items to be order)
-- Checkout process (shipping, payment method, etc)
-- Order summary
-- PayPal / credit card integration
-- Esewa payment integration (Nepali payment gateway)
-- Database seeder (products, users, reviews, & orders)
+  - name
+  - description
+  - price
+  - quantity
+  - owner
 
-**New features (Added)**
+- reviews
+  - description
+  - rating
+  - owner
 
-- Print User orders as pdf
-- Print UserList as pdf
-- Print OrderList as pdf
+# Techology
 
-**Admin features**
+- MongoDB-database
+- Express-backen framework
+- Nodejs-javascript runtime
 
-- Product management
-- User management
-- Order management
-- Order details page
-- Mark orders as delivered option
+# ERD
 
-## Tech Stack 💻
+![image](https://user-images.githubusercontent.com/48740174/186016623-dffcd3de-eb62-45d9-8ad9-cd46108cb011.png)
 
-- [React.js](https://reactjs.org/)
-- [Node.js](https://nodejs.org/en/)
-- [Express.js](https://expressjs.com/)
-- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-- [Material UI](https://material-ui.com/)
-- [React Bootstrap](https://react-bootstrap.github.io/)
-- [Redux](https://redux.js.org/)
+A user can have multiple items, and a user can have multiple reviews
 
-## API :man_technologist:
+# Routes
 
-- [PayPal API](https://developer.paypal.com/)
-- [Esewa API](https://developer.esewa.com.np)
-- [Send Grid API](https://sendgrid.com/)
-- [Cloudinary API](https://cloudinary.com/)
+## User route
 
-## Installation :zap:
+| Verb   | Route            | Description                |
+| ------ | ---------------- | -------------------------- |
+| POST   | /sign-up         | create a new account       |
+| GET    | /sign-in         | sign in into account       |
+| DELETE | /signout         | sign out of curent account |
+| PATCH  | /change-password | change account password    |
 
-**1. Clone this repo by running the following command :-**
+## item route
 
-```bash
- git clone https://github.com/SajidAnTechie/ShopPoint
- cd ShopPoint
-```
+| Verb   | Route              | Description                          |
+| ------ | ------------------ | ------------------------------------ |
+| POST   | /create-item       | create a new item for sale           |
+| GET    | /show-all-item     | show all available item on home page |
+| GET    | /show-all-item/:id | show a specific item                 |
+| DELETE | /delete/:id        | delete specific item                 |
+| PATCH  | /update/:id        | update a sale item                   |
 
-**2. Now install all the required packages(frontend & backend) by running the following commands :-**
+##review
 
-```
-yarn add
-cd client
-yarn add
-```
+| Verb   | Route        | Description         |
+| ------ | ------------ | ------------------- |
+| POST   | /review      | create a new review |
+| GET    | /show-review | show all review     |
+| DELETE | /review/:id  | delete a review     |
+| PATCH  | /review/:id  | update a review     |
 
-**2. Create a config.env file in config folder and add the following**
+# link to Client
 
-```
-PORT=5000
-NODE_ENV=development
-
-MONGO_URI =your mongodb uri
-
-PAYPAL_CLIENT_ID=your paypal client id
-
-FILE_UPLOAD_PATH=./public/uploads/product
-FILE_UPLOAD_SIZE=1000000
-
-JWT_SECRET=your key
-JWT_EXPIREIN=30d
-
-CLOUD_NAME=your cloudinary name
-API_KEY=your cloudinary api key
-API_SECRET=your cloudinary api secret key
-
-SEND_GRID_KEY=your sendgrid api key
-
-FROM_EMAIL=your sender email
-FROM_NAME=ShoppingPoint
-
-```
-
-**3. Seed Database**
-
-```
-# Import data
-node seeder -i
-
-# Destroy data
-node seeder -d
-```
-
-**4. Now start the react and node server by running the following command :-**
-
-```
-#Start the server
-yarn run dev
-
-#Start the client side app
-cd client
-
-yarn start
-```
-
-**5.** **🎉 Open your browser and go to `https://localhost:3000`**
-
-## 🤩 Don't forget to give this repo a ⭐ if you like this repo and want to appreciate our efforts
+https://github.com/Yuntian-Zheng/shop-client
